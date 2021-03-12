@@ -1,34 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">    <title>WMM</title>
 </head>
 <body>
 <div class="container">
-    <div class="sidebar">
+    <section class="sidebar">
         <div class="sidebar_heading_inner">
             <div class="sidebar_heading">
                 <h2 class="logo">LOGO</h2>
                 <div class="add_category_btn btn"> + CATEGORY</div>
             </div>
         </div>
-        <div class="categories_inner">
-            <div class="categories">
-                <hr class="line">
-                <div class="category_item">
-                    Category
-                </div>
-                <hr class="line">
-            </div>
-        </div>
-    </div>
-    <div class="content">
+        <ul class="accordeon">
+            <li>
+                <a href="#" class="toggle category_item" href="javascript:void(0);">Category</a>
+                <ul class="inner">
+                    <div class="add_subcategory_btn btn"> + SUB</div>
+                    <li>
+                        <a href="#" class="toggle subcategories">Subcategory</a>
+                        <ul class="inner">
+                            <div class="add_product_btn btn"> + Prod</div>
+                            <li>
+                                <div class="product_action_inner">
+                                    <div class="product_name">
+                                        Маринованный чеснок
+                                    </div>
+                                    <div class="product_action">
+                                        <input class="cost" type="number" style="width: 50px">
+                                        <div class="buy_btn btn">Добавить</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr>
+                            <div class="product_action_inner">
+                                <div class="product_name">
+                                    Product
+                                </div>
+                                <div class="product_action">
+                                    <input class="cost" type="number" style="width: 50px">
+                                    <div class="buy_btn btn">Добавить</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="product_action_inner">
+                                <div class="product_name">
+                                    Product
+                                </div>
+                                <div class="product_action">
+                                    <input class="cost" type="number" style="width: 50px">
+                                    <div class="buy_btn btn">Добавить</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="product_action_inner">
+                                <div class="product_name">
+                                    Product
+                                </div>
+                                <div class="product_action">
+                                    <input class="cost" type="number" style="width: 50px">
+                                    <div class="buy_btn btn">Добавить</div>
+                                </div>
+                            </div>
+                            <hr>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="toggle subcategories">Subcategory</a>
+                        <ul class="inner">
+                            <div class="add_product_btn btn"> + Prod</div>
+                            <li>Product</li>
+                            <li>Product</li>
+                            <li>Product</li>
+                            <li>Product</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="toggle category_item" href="javascript:void(0);">Category</a>
+                <ul class="inner">
+                    <div class="add_subcategory_btn btn"> + SUB</div>
+                    <li>Subcategory</li>
+                    <li>Subcategory</li>
+                    <li>Subcategory</li>
+                    <li>Subcategory</li>
+                    <li>Subcategory</li>
+                    <li>Subcategory</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="content">
         <header class="header">
             <ul class="header_menu">
                 <li class="header_menu_item">
@@ -54,9 +123,12 @@
                 <div class="heading_block_btn">Subcategories</div>
             </div>
         </section>
-    </div>
+        <div class="inner" style="background-color: #E5E5E5; height: 100%;">
+
+        </div>
+    </section>
 
 </div>
-
+<script src="assets/scripts/index.js"></script>
 </body>
 </html>

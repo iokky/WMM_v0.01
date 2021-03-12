@@ -27,6 +27,7 @@ a {
 /*BASIC*/
 .container {
     display: flex;
+    height: 1vh;
 }
 
 .sidebar {
@@ -75,10 +76,11 @@ a {
 .heading_block {
     margin-top: -32px;
     height: 110px;
-    box-shadow:  2px 3px 10px -3px rgba(0,0,0,.8);
+    box-shadow:  2px 3px 10px -3px rgba(0,0,0,.9);
 }
 
 .main_heading {
+    margin-top: 30px;
     padding-top: 10px;
     margin-left: 30px;
     font-size: 44px;
@@ -129,9 +131,10 @@ a {
 /*SIDEBAR*/
 
 .sidebar {
-    background-color: var(--sidebar_color);
+    background: var(--sidebar_color);
     margin-left: 0;
     margin-right: 0;
+    height: 1080px;
 }
 
 .sidebar_heading_inner {
@@ -159,20 +162,58 @@ a {
     margin-left: 44px;
     padding-top: 10px;
     padding-bottom: 10px;
-    /*font-family: var(--roboto);*/
+    background-color: #114270;
     font-size: 20px;
     color: var(--txt_white);
     cursor: pointer;
+
+    display: block;
+    line-height: 50px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
 }
 
 .category_item:hover,
 .category_item:focus,
 .category_item:active {
     color: var(--focus_txt_color);
+    background-color: var(--txt_white);
+}
+
+/*Subcategories*/
+
+.subcategories {
+    color: var(--txt_white);
+}
+
+/*Products*/
+
+.product_action_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_action {
+    display: flex;
+}
+
+.cost {
+    margin-right: 4px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.product_name {
+    font-size: 12px;
 }
 
 /*Button*/
 .btn {
+    height: 25px;
+    width: 100px;
     background-color: var(--focus_txt_color);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -187,10 +228,64 @@ a {
 }
 
 .add_category_btn {
-    margin-top: -4px;
-    height: 25px;
-    width: 100px;
+    margin-top: 70px;
     padding: 6.5px 14px;
 }
 
+.add_subcategory_btn {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5.5px 30px;
+}
 
+.add_product_btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5.5px 30px;
+}
+
+.buy_btn {
+    width: 66px;
+    padding: 5.5px 5px;
+}
+
+/*Accordeon*/
+
+.accordeon {
+    margin-top: 20px;
+    margin-left: -84px;
+}
+
+/*accordeon*/
+.accordeon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.accordeon li {
+    margin: 0 0 2px 0;
+    padding: 0;
+}
+
+.accordeon > li.slide > a,
+.accordeon > li.active > a {
+    background: #1967c3;
+    color: #FFF;
+}
+.accordeon > li > ul {
+    display: none;
+    margin-left: 44px;
+    background: #325D85;
+    padding: 10px 0;
+}
+.accordeon > li.active > ul {
+    display: block;
+}
+.accordeon > li > ul > li {
+    margin-left: 30px;
+    padding: 5px 30px;
+    text-decoration: none;
+    display: block;
+    color: var(--txt_white);
+    cursor: pointer;
+}
