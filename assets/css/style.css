@@ -52,11 +52,11 @@ a {
 .header_menu {
     display: flex;
     margin-top: 5px;
-    margin-right: 60px;
+    margin-right: 20px;
     float: right;
 }
 
-.header_menu_item {
+.header_menu_item:not(:last-child) {
     margin-right: 40px;
 }
 
@@ -100,6 +100,7 @@ a {
     cursor: pointer;
     font-family: var(--roboto);
     color: #27376D;
+    transition: 0.5s;
 }
 
 .heading_block_btn:after {
@@ -111,16 +112,19 @@ a {
     border-radius: 2px;
     background-color: var(--focus_txt_color);
     content: "";
+    transition: 0.5s;
 }
 
 .heading_block_btn:hover:after {
     width: 100%;
+    transition: 0.5s;
 }
 
 .heading_block_btn:hover,
 .heading_block:focus,
 .heading_block_btn:active {
     color: var(--focus_txt_color);
+    transition: 0.5s;
 }
 
 .heading_block_btn:not(:first-child) {
@@ -160,8 +164,6 @@ a {
 
 .category_item {
     margin-left: 44px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     background-color: #114270;
     font-size: 20px;
     color: var(--txt_white);
@@ -173,6 +175,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     vertical-align: middle;
+    transition: 1s;
 }
 
 .category_item:hover,
@@ -180,12 +183,36 @@ a {
 .category_item:active {
     color: var(--focus_txt_color);
     background-color: var(--txt_white);
+    padding: 0 25%;
+    transition: 1s;
 }
 
 /*Subcategories*/
 
-.subcategories {
+.subcategories_item {
+    margin-bottom: -10px;
     color: var(--txt_white);
+    background-color: #1b4161;
+    border-radius: 5px;
+    font-size: 14px;
+
+    display: block;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.subcategories_item:hover,
+.subcategories_item:active,
+.subcategories_item:focus {
+    color: var(--focus_txt_color);
+    background-color: var(--txt_white);
+    transition: 1s;
+    padding: 0 80px;
+    transition: 1s;
 }
 
 /*Products*/
@@ -220,6 +247,7 @@ a {
     color: var(--txt_white);
     font-size: 12px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .btn:hover {
@@ -288,4 +316,30 @@ a {
     display: block;
     color: var(--txt_white);
     cursor: pointer;
+}
+
+
+/*MODAL FORM*/
+
+.category_form {
+    margin-left: 20px;
+    margin-right: 0;
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: var(--subcat_color);
+    border-radius: 5px;
+    position: relative;
+    left: -1000px;
+}
+
+.category_name {
+    margin-top: 20px;
+    margin-left: 6px;
+}
+
+.form_btn {
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 5px 40px;
 }

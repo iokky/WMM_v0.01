@@ -13,3 +13,21 @@ $('.toggle').click(function(e) {
         $this.next().slideToggle(350);
     }
 });
+
+
+$(function () {
+
+    let form = $('#category_form');
+
+    $('#add_category').click(function () {
+        form.animate({
+            left: '0',
+        }, 680, function(){})
+    }),
+
+    $('#category_form_btn').click(function () {
+        form.animate({
+            left: '-=1000',
+        },680, function () {})
+    })
+})
